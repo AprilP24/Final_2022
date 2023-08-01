@@ -62,21 +62,21 @@ The numerical results above shows percentages of males that got covid-19 after t
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
-guysfish <- fisher.test(table1)
-guysfish
+Malefish <- fisher.test(table1)
+Malefish
 ```
 
 From the data above it shows that for men the 95 percent confidence interval is 1.798 for the placebo and 2.81 for the vaccine the odds ratio is 2.242522 the p value = 4.632e-14.
 
 ```{r}
-effect <- guysfish$p.value/(guysfish$p.value +1)
-effectivenessguy = guysfish$estimate/(guysfish$estimate +1)*100
-print(effectivenessguy)
+effect <- Malefish$p.value/(Malefish$p.value +1)
+effectivenessMale = Malefish$estimate/(Malefish$estimate +1)*100
+print(effectivenessMale)
 ```
 
 ```{r}
-low=(guysfish$conf.int[1]/(guysfish$conf.int[1] +1))*100
-hi=(guysfish$conf.int[2]/(guysfish$conf.int[2] +1))*100
+low=(Malefish$conf.int[1]/(Malefish$conf.int[1] +1))*100
+hi=(Malefish$conf.int[2]/(Malefish$conf.int[2] +1))*100
 options(digits=2)
 ```
 
@@ -101,6 +101,20 @@ rowPerc(table1)
 colPerc(table1)
 ``` 
 The table above shows that 60% of people that are infected with "covid19" received the placebo treatment, while 40% received the vaccine" treatment, and 50% of people classified as non infected received the "placebo" treatment, and 50% received the vaccine treatment.Then 2% females were given the placebo(infected) and the 98% were not. So it totals to 1.4% and 98% of females that were given the vaccine was not affected by it. Showing that there was a large number of females that were not infected after receiving the vaccine. 
+
+
+#Inferential
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+Femalefish <- fisher.test(table1)
+Femalefish
+```
+
+
+The p value for data: table 1 is 2e-04 and the 95 percent confidence intervals are 1.2 and 1.9 and the odds ratio is 1.5. 
+
 
 ## LGBTQ
 
