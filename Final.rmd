@@ -144,6 +144,7 @@ basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+The Bar chart above shows the ones who got covid and took the placebo and got infected was about 10% and the ones who took the vaccine and got infected were about 81%. The ones who took the placebo and didn't get infected there was only 50% and the ones who took the vaccine and didn't get infected are about 50%.
 
 
 
