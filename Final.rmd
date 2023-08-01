@@ -45,7 +45,9 @@ basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+
 The chart above shows the percentages of men who have covid and got infected with placeabo and  got infected with the vaccine. The men who got infected with placeabo stand at 60% while the others who also caught covid and got infected with the vaccine stand at 30%. And the one's who are ok stand tall at 50% and above. 
+
 
 ## Females
 
