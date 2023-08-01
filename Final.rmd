@@ -66,6 +66,8 @@ guysfish <- fisher.test(table1)
 guysfish
 ```
 
+From the data above it shows that for men the 95 percent confidence interval is 1.798 for the placebo and 2.81 for the vaccine the odds ratio is 2.242522 the p value = 4.632e-14.
+
 ## Females
 
 
