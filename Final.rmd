@@ -83,6 +83,14 @@ options(digits=2)
  the data above is the effectiveness for the covid-19 vaccine for males. Based on the interval ,the odds ratio for the  males are 69. Which tells us how effective the vaccine was.
 
 ## Females
+```{r}
+basic <- Female %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+basicC <- ggplot(basic,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
 
 
 ## LGBTQ
