@@ -37,12 +37,15 @@ the method here is  to change the data in this final data so that we can factor 
 ## barchart
 
 ```{r}
-basic <- Male %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+basic <- Male %>% group_by(infected,treatment) %>% 
+summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 basicC <- ggplot(basic,aes(x=infected,y=count,fill=treatment))
 basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
+
+The chart above shows the percentages of men who have covid and got infected with placeabo and  got infected with the vaccine. The men who got infected with placeabo stand at 60% while the others who also caught covid and got infected with the vaccine stand at 30%. And the one's who are ok stand tall at 50% and above. 
 
 ## Females
 
