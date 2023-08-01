@@ -100,7 +100,7 @@ table1 <- xtabs(~infected + treatment, data=Female)
 rowPerc(table1)
 colPerc(table1)
 ``` 
-
+The table above shows that 60% of people that are infected with "covid19" received the placebo treatment, while 40% received the vaccine" treatment, and 50% of people classified as non infected received the "placebo" treatment, and 50% received the vaccine treatment.Then 2% females were given the placebo(infected) and the 98% were not. So it totals to 1.4% and 98% of females that were given the vaccine was not affected by it. Showing that there was a large number of females that were not infected after receiving the vaccine. 
 
 ## LGBTQ
 
