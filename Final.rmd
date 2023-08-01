@@ -116,6 +116,13 @@ Femalefish
 The p value for data: table 1 is 2e-04 and the 95 percent confidence intervals are 1.2 and 1.9 and the odds ratio is 1.5. 
 
 
+```{r}
+effect <- Femalefish$p.value/(Femalefish$p.value +1)
+effectivenessFemale = Femalefish$estimate/(Femalefish$estimate +1)*100
+print(effectivenessFemale)
+```
+the odds ratio is 60
+
 ## LGBTQ
 
 
