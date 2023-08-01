@@ -196,6 +196,14 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 The data shown above shows Drug users who got covid and took the placebo only about  10% to 15% got sick and the ones who got the vaccine about 84% of them got sick. and of the ones who didn't get sick there results were 50/50.
 
+## Numerical
+```{r}
+table1 <- xtabs(~infected + treatment, data=Druguser)
+rowPerc(table1)
+colPerc(table1)
+```
+from the data above it shows the  drug users that got covid and had the placebo only about 12% sick and the ones that had the vaccine about only 88% got sick. For the drug users who didn't get sick 49% percent who didn't get sick and the ones who had the vaccine there was about 51% of them.
+
 
 ## Inferential
 
