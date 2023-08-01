@@ -182,7 +182,18 @@ options(digits=2)
 
 the data above is the effectiveness for the covid-19 vaccine for LGBTQ. Based on the interval and the odds ratio for the LGBTQ are 15. Which so far it seems the lowest than the others Which tells us how effective the vaccine was.
 
-## Druggies
 
+## Druguser
+
+## Graphical
+```{r}
+basic <- Druguser %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+basicC <- ggplot(basic,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+The data shown above shows Drug users who got covid and took the placebo only about  10% to 15% got sick and the ones who got the vaccine about 84% of them got sick. and of the ones who didn't get sick there results were 50/50.
 
 # Overall Results and Conclusions
