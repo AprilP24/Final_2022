@@ -153,6 +153,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The people who got covid and took the placebo only 15% got sick and  for the ones who had the vaccine only 85% got sick.
+
 ## Druggies
 
 
