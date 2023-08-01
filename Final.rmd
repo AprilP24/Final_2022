@@ -196,4 +196,32 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 The data shown above shows Drug users who got covid and took the placebo only about  10% to 15% got sick and the ones who got the vaccine about 84% of them got sick. and of the ones who didn't get sick there results were 50/50.
 
+
+## Inferential
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+Druguserfish <- fisher.test(table1)
+Druguserfish
+```
+
+The p value that I got from the fisher test is 1e-08 the 95 percent confidence intervals are 0.082 and 0.362 the odds ratio is 0.18.
+
+```{r}
+effect <- Druguserfish$p.value/(Druguserfish$p.value +1)
+effectivenessDruguser = Druguserfish$estimate/(Druguserfish$estimate +1)*100
+print(effectivenessDruguser)
+```
+
+The odds ratio of the vaccine and drug users is about 15.
+
+```{r}
+low=(Druguserfish$conf.int[1]/(Druguserfish$conf.int[1] +1))*100
+hi=(Druguserfish$conf.int[2]/(Druguserfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+The results of the data above shows the effectiveness for the covid-19 vaccine for Druguser. Based on the interval and the odds ratio it still stand at 15 as the LGBTQ. But it is still lower than the female and male. Which so far there is a little to no difference between the Druguser and LGBTQ when it comes to the odd ration. In Which tells us how effective the vaccine was and it doesn't seem effective?.
+
 # Overall Results and Conclusions
