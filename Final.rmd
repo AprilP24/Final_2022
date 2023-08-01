@@ -91,7 +91,7 @@ basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-
+The females who had covid and took the vaccine is around 58%, (almost 60) of them got sick and the ones who took the placebo is about 40 to at least 42% got covid and the ones who didn't get sick the ones who got the placebo it is about 50% and about 49% took the vaccine.
 
 ## LGBTQ
 
