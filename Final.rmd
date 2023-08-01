@@ -123,7 +123,27 @@ print(effectivenessFemale)
 ```
 the odds ratio is 60
 
+
+```{r}
+low=(Femalefish$conf.int[1]/(Femalefish$conf.int[1] +1))*100
+hi=(Femalefish$conf.int[2]/(Femalefish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+the data above is the effectiveness for the covid-19 vaccine for Females. Based on the interval ,the odds ratio for the Females are 60. Which tells us how effective the vaccine was.Also is less than the males. 
+
+
+
 ## LGBTQ
+
+```{r}
+basic <- LGBTQ %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+basicC <- ggplot(basic,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
 
 
 
