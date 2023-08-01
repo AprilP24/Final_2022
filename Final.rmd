@@ -155,6 +155,18 @@ colPerc(table1)
 
 The people who got covid and took the placebo only 15% got sick and  for the ones who had the vaccine only 85% got sick.
 
+
+## Inferential 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+LGBTQfish <- fisher.test(table1)
+LGBTQfish
+```
+
+The p-value that I got was 1e-08 the 95 percent confidence intervals are 0.082 and 0.362 the odds ratio is 0.18.
+
 ## Druggies
 
 
